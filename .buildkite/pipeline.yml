@@ -16,7 +16,7 @@ steps:
     key: "terraform-checks"
     steps:
 
-    - key: "fmt:test"
+    - key: "fmt:testtt"
       label: ":terraform: Test: Check terraform formatting"
       command: python3 helloworld.py
 
