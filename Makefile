@@ -13,7 +13,7 @@ TF ?= docker-compose run --rm terraform-utils
 NODE ?= docker-compose run --rm nodejs
 
 fmt:
-	$(TF) python3 helloworld.py
+	docker-compose run --rm terraform-utils python3 helloworld.py
 .PHONY: fmt
 
 fmt_check:
