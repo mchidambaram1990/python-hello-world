@@ -13,7 +13,7 @@ steps:
   - wait
 
   - group: ":terraform: :nodejs: Checks"
-    key: "terraform-checks"
+    key: "terraform-checksss"
     steps:
 
     - key: "fmt:testtt"
