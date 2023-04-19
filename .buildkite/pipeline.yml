@@ -13,10 +13,10 @@ steps:
   - wait
 
   - group: ":terraform: :nodejs: Checks"
-    key: "terraform-checks"
+    key: "terraform-checksss"
     steps:
 
     - key: "fmt:testtt"
       label: ":terraform: Test: Check terraform formatting"
-      command: python3 helloworld.py
+      command: make fmt
 
