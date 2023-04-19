@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   terraform-utils:
-    image: hashicorp/terraform:${TERRAFORM_VERSION:-1.4}
+    image: docker pull python:3.9.16
     working_dir: /infra/infrastructure
     entrypoint: [""]
     volumes:
