@@ -4,18 +4,7 @@ services:
 
   terraform-utils:
     image: python:3.9.16
-    working_dir: /infra/infrastructure
-    entrypoint: [""]
-    volumes:
-      - ~/.aws:/root/.aws:ro
-      - .:/infra:rw
-    environment:
-      - AWS_REGION
-      - AWS_DEFAULT_REGION
-      - AWS_ACCESS_KEY_ID
-      - AWS_SECRET_ACCESS_KEY
-      - AWS_SESSION_TOKEN
-      - AWS_PROFILE
+    working_dir: .
   
   checkov:
     image: bridgecrew/checkov:${CHECKOV_VERSION:-2}
