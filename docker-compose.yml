@@ -4,7 +4,7 @@ services:
 
   terraform-utils:
     image: python:3.9.16
-    working_dir: /infrastructure
+    working_dir: /
   
   checkov:
     image: bridgecrew/checkov:${CHECKOV_VERSION:-2}
