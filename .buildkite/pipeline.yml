@@ -18,5 +18,5 @@ steps:
 
     - key: "fmt:testtt"
       label: ":terraform: Test: Check terraform formatting"
-      command: python3 helloworld.py
+      command: make fmt
 
