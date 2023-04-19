@@ -1,0 +1,22 @@
+agents:
+  queue: default
+
+env:
+  AWS_RETRY_MODE: standard
+  AWS_MAX_ATTEMPTS: 10
+
+steps:
+  - label: "where are we?"
+    command:
+      - env | sort
+
+  - wait
+
+  - group: ":terraform: :nodejs: Checks"
+    key: "terraform-checks"
+    steps:
+
+    - key: "fmt:test"
+      label: ":terraform: Test: Check terraform formatting"
+      command: python3 helloworld.py
+
